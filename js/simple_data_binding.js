@@ -3,7 +3,12 @@ $(document).ready(function() {
 });
 
 function dataBinding() {
-	document.getElementById("textArea").addEventListener("keypress", bindValues());
+	document.getElementById("textArea").addEventListener("keyup", bindValues)
+ 
+  //$('#myDiv').append($('textarea').val());
+//document.getElementById("myDiv").append($('textarea').val());
+
+
 }
 
 function bindValues() {
@@ -12,7 +17,3 @@ function bindValues() {
 document.getElementById("myDiv").append($('textarea').val());
 
 }
-
-
-
-
