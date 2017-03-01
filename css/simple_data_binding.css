@@ -13,3 +13,6 @@ body {
 #myDiv {
   font-size: 4em;
 }
+div {
+    white-space: pre;
+}
