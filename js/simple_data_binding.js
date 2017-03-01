@@ -1,19 +1,19 @@
 $(document).ready(function() {
-  dataBinding();
-});
+ dataBinding(); 
+}); 
 
-function dataBinding() {
-	document.getElementById("textArea").addEventListener("keyup", bindValues)
- 
-  //$('#myDiv').append($('textarea').val());
-//document.getElementById("myDiv").append($('textarea').val());
+function dataBinding(){
+ $('#textArea').on('keyup',function (key) {
+ 	if(key.which == 8){
+ 	var txt = $('#myDiv').text($('#textArea').val());
+ 		return txt.slice(0, -1);
 
+     }
+ 		 else if (key.which == 13){
+      $('#myDiv').append('</br>');}
 
-}
-
-function bindValues() {
- 
-  //$('#myDiv').append($('textarea').val());
-document.getElementById("myDiv").append($('textarea').val());
-
-}
+      else {
+ 	
+  $('#myDiv').text("");
+   $('#myDiv').text($('#textArea').val()); } 
+});}
